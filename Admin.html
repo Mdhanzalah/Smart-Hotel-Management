@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Smart PALACE</title>
+    <link rel="stylesheet" href="Admin.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h2>Smart <span>PALACE</span></h2>
+        <p class="admin-label">ADMIN PANEL</p>
+
+        <nav>
+            <a href="Admin.html" class="active">Dashboard</a>
+            <a href="Bookings.html">Manage Bookings</a>
+            <a href="index.html">View Website</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Admin Dashboard</h1>
+                <p>Welcome to Smart PALACE Management</p>
+            </div>
+            <div class="admin-profile">Admin</div>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <p>Total Bookings</p>
+                <h2 id="totalBookings">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Total Guests</p>
+                <h2 id="totalGuests">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Room Types Booked</p>
+                <h2 id="roomTypes">0</h2>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Recent Bookings</h2>
+                    <p>Latest guest reservations</p>
+                </div>
+                <a href="Bookings.html" class="view-btn">View All</a>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Guest Name</th>
+                            <th>Mobile</th>
+                            <th>Room Type</th>
+                            <th>Check-in</th>
+                            <th>Check-out</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentBookings">
+                        <tr>
+                            <td colspan="5">Loading bookings...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="Admin.js"></script>
+</body>
+</html>

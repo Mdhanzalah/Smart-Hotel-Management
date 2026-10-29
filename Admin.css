@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f7f4ed;
+    color: #25231f;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #151b18;
+    color: #fffdf8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 20px;
+}
+
+.sidebar h2 {
+    font-size: 23px;
+    color: #f0d49a;
+    margin-bottom: 8px;
+}
+
+.sidebar h2 span {
+    color: #fffdf8;
+}
+
+.admin-label {
+    color: #b9b4a8;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin: 15px 0 35px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: #e8e3d8;
+    padding: 14px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #d5b779;
+    color: #151b18;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 35px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.topbar h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.topbar p,
+.section-heading p {
+    color: #777267;
+    font-size: 14px;
+}
+
+.admin-profile {
+    background: #151b18;
+    color: #f0d49a;
+    padding: 12px 22px;
+    border-radius: 25px;
+}
+
+/* Statistics Cards */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 35px;
+}
+
+.stat-card {
+    background: #fffdf8;
+    border: 1px solid #e8dfcc;
+    border-top: 4px solid #d5b779;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card p {
+    color: #777267;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.stat-card h2 {
+    font-size: 32px;
+    color: #151b18;
+}
+
+/* Recent Bookings */
+.booking-section {
+    background: #fffdf8;
+    border: 1px solid #e8dfcc;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.view-btn {
+    background: #151b18;
+    color: #f0d49a;
+    padding: 12px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.view-btn:hover {
+    background: #d5b779;
+    color: #151b18;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+thead {
+    background: #151b18;
+    color: #f0d49a;
+}
+
+th,
+td {
+    padding: 15px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee7d9;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #f7f1e4;
+}
+
+tbody td[colspan] {
+    text-align: center;
+    color: #777267;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+        padding: 22px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 20px;
+    }
+
+    .admin-label {
+        margin-bottom: 15px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar nav a {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 18px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+    }
+
+    .topbar h1 {
+        font-size: 24px;
+    }
+
+    .admin-profile {
+        padding: 9px 13px;
+    }
+
+    .booking-section {
+        padding: 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 20px;
+    }
+}

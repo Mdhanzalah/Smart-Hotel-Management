@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Smart Hotel</title>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2 class="logo">SMART HOTEL</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Room.html">Rooms</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+          
+        </nav>
+    </header>
+
+    <section class="contact-hero">
+        <h1>Contact Us</h1>
+        <p>We are here to make your stay special.</p>
+    </section>
+     <section class="booking-section">
+    <h2>Book Your Stay !</h2>
+    <p>Choose your dates and room details.</p>
+
+    <form id="bookingForm" onsubmit="saveBooking(event)">
+        <label for="guestName">Full Name</label>
+<input
+    type="text"
+    id="guestName"
+    name="guestName"
+    placeholder="Enter your full name"
+    required
+>
+
+<label for="guestAge">Age</label>
+<input
+    type="number"
+    id="guestAge"
+    name="guestAge"
+    min="1"
+    max="120"
+    placeholder="Enter your age"
+    required
+>
+
+<label for="mobile">Mobile Number</label>
+<input
+    type="tel"
+    id="mobile"
+    name="mobile"
+    pattern="[0-9]{10}"
+    maxlength="10"
+    placeholder="10-digit mobile number"
+    required
+>
+
+<label for="aadhaar">Aadhaar Number *</label>
+<input
+    type="text"
+    id="aadhaar"
+    name="aadhaar"
+    inputmode="numeric"
+    pattern="[0-9]{12}"
+    maxlength="12"
+    placeholder="12-digit number,  required"
+>
+        <label for="checkIn">Check-in Date</label>
+        <input type="date" id="checkIn" required>
+
+        <label for="checkOut">Check-out Date</label>
+        <input type="date" id="checkOut" required>
+
+        <label for="roomType">Room Type</label>
+        <select id="roomType" required>
+            <option value="">Select Room Type</option>
+            <option value="Deluxe Room">Deluxe Room</option>
+            <option value="Luxury Room">Luxury Room</option>
+            <option value="Family Room">Family Room</option>
+        </select>
+
+        <label for="rooms">Number of Rooms</label>
+        <select id="rooms" required>
+            <option value="">Select Rooms</option>
+            <option value="1">1 Room</option>
+            <option value="2">2 Rooms</option>
+            <option value="3">3 Rooms</option>
+            <option value="4">4 Rooms</option>
+        </select>
+
+        <label for="persons">Number of Persons</label>
+        <select id="persons" required>
+            <option value="">Select Persons</option>
+            <option value="1">1 Person</option>
+            <option value="2">2 Persons</option>
+            <option value="3">3 Persons</option>
+            <option value="4">4 Persons</option>
+            <option value="5">5 Persons</option>
+            <option value="6">6 Persons</option>
+        </select>
+
+        <button type="submit">CONFIRM BOOKING</button>
+    </form>
+</section>
+
+    <section class="contact-section">
+        <div class="contact-info">
+            <h2>Get In Touch</h2>
+            <p>Have a question or want to book a room? Contact us today.</p>
+
+            <div class="info-item">
+                <h3>Our Address</h3>
+                <p>Please contact us for hotel location details.</p>
+            </div>
+
+            <div class="info-item">
+                <h3>Phone Number</h3>
+                <p>+917080665466</p>
+            </div>
+
+            <div class="info-item">
+                <h3>Email Address</h3>
+                <p>mohdhanzalah547@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send Us A Message  ( If Any Query *)</h2>
+
+            <form action="#" method="get">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject"
+                       placeholder="Enter subject" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5"
+                          placeholder="Write your message here"
+                          required></textarea>
+
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+        </div>
+    </section>
+   
+
+<script src="Booking.js"></script>
+
+    <footer class="contact-footer">
+        <p>© 2026 Smart Hotel. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

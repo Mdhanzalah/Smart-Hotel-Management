@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f5ef;
+    color: #222;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: #171717;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.logo {
+    color: #c5a15b;
+    font-size: 27px;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #c5a15b;
+}
+
+.navbar nav a.book-btn {
+    background: #c5a15b;
+    color: #171717;
+    padding: 12px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+
+.contact-hero {
+    min-height: 280px;
+    background:
+        linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+        url("Images/Main02.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 35px 20px;
+    color: white;
+}
+
+.contact-hero h1 {
+    font-size: 46px;
+    margin-bottom: 15px;
+}
+
+.contact-hero p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 45px;
+    padding: 70px 8%;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #9b7639;
+}
+
+.contact-info > p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    padding: 18px 0;
+    border-bottom: 1px solid #e2d8c6;
+}
+
+.info-item h3 {
+    color: #222;
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.info-item p {
+    color: #666;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+
+.contact-form {
+    background: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,.08);
+}
+
+.contact-form label {
+    display: block;
+    margin: 17px 0 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #b08a4b;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    margin-top: 22px;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    background: #b08a4b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contact-form button:hover {
+    background: #171717;
+}
+
+
+.booking-section {
+    background: #182522;
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.booking-section h2 {
+    color: #e4c17e;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.booking-section p {
+    margin-bottom: 25px;
+}
+
+.booking-section form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+}
+
+.booking-section label {
+    color: #e4c17e;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.booking-section input,
+.booking-section select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #b89b61;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #222222;
+    font-size: 16px;
+}
+
+.booking-section button {
+    margin-top: 20px;
+    padding: 14px;
+    background: #e4c17e;
+    color: #182522;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.booking-section button:hover {
+    background: #c9a65f;
+}
+.contact-footer {
+    background: #171717;
+    color: #aaa;
+    text-align: center;
+    padding: 22px 15px;
+    font-size: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 750px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .contact-hero h1 {
+        font-size: 35px;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .contact-form {
+        padding: 24px 18px;
+    }
+}

@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #151b18;
+    color: #25231f;
+    min-height: 100vh;
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background:
+        radial-gradient(circle at top left, #354338, transparent 45%),
+        radial-gradient(circle at bottom right, #3c3020, transparent 45%),
+        #151b18;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 42px 35px;
+    background: #fffdf8;
+    border: 1px solid #d5b779;
+    border-radius: 12px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.login-card h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #151b18;
+    margin-bottom: 8px;
+}
+
+.login-card h1 span {
+    color: #b18a3d;
+}
+
+.subtitle {
+    text-align: center;
+    color: #85744f;
+    letter-spacing: 3px;
+    font-size: 10px;
+    margin-bottom: 35px;
+}
+
+.login-card h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.description {
+    color: #777267;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#loginForm label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 20px;
+    border: 1px solid #d9d1c0;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 15px;
+    outline: none;
+}
+
+#loginForm input:focus {
+    border-color: #b18a3d;
+    box-shadow: 0 0 0 2px rgba(177, 138, 61, 0.12);
+}
+
+#loginForm button {
+    padding: 14px;
+    margin-top: 5px;
+    background: #151b18;
+    color: #f0d49a;
+    border: 1px solid #151b18;
+    border-radius: 5px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#loginForm button:hover {
+    background: #d5b779;
+    color: #151b18;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.back-link {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    color: #77602f;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 32px 23px;
+    }
+
+    .login-card h1 {
+        font-size: 26px;
+    }
+}

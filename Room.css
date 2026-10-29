@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f5ef;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: #171717;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.logo {
+    color: #c5a15b;
+    font-size: 27px;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #c5a15b;
+}
+
+.navbar nav a.book-btn {
+    background: #c5a15b;
+    color: #171717;
+    padding: 12px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.rooms-hero {
+    min-height: 300px;
+    background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("Images/Main02.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+.rooms-hero h1 {
+    font-size: 46px;
+    margin-bottom: 15px;
+}
+
+.rooms-hero p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Room Cards */
+.rooms-section {
+    padding: 65px 7%;
+}
+
+.rooms-section > h2 {
+    text-align: center;
+    color: #222;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.room-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.room-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.10);
+    transition: .3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0,0,0,.16);
+}
+
+.room-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.room-info {
+    padding: 24px;
+}
+
+.room-info h3 {
+    color: #9b7639;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.room-info p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.room-info h4 {
+    color: #222;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.room-info a {
+    display: inline-block;
+    background: #b08a4b;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.room-info a:hover {
+    background: #171717;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .room-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .rooms-hero h1 {
+        font-size: 34px;
+    }
+
+    .rooms-section {
+        padding: 45px 20px;
+    }
+
+    .rooms-section > h2 {
+        font-size: 26px;
+    }
+
+    .room-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.footer {
+    background: #171717;
+    color: #dddddd;
+    padding: 55px 7% 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-brand h2 {
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.footer-brand h2 span {
+    color: #c5a15b;
+}
+
+.footer-brand p {
+    color: #bbbbbb;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    color: #c5a15b;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-links a {
+    display: block;
+    color: #dddddd;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #c5a15b;
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.footer .copyright {
+    border-top: 1px solid #444444;
+    text-align: center;
+    padding: 20px 10px;
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+
+@media (max-width: 700px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer {
+        padding: 40px 22px 0;
+    }
+}
